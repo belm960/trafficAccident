@@ -1,0 +1,60 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  resize: vertical;
+  flex: 0 0 200px;
+  margin-left: 5px;
+}
+
+div.toptitle{
+  text-align: left;
+  color:blue;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  
+}
+label {
+  display: inline;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: left;
+  font-weight: bold;
+  line-height: 26px;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+.card-header{
+
+  background-color:lightsteelblue;
+  
+}
+.motorist {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}

@@ -1,0 +1,74 @@
+<mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia">
+  </mat-form-field>
+  
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+       
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Accident ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.accidentid}} </td>
+      </ng-container>
+    <!-- ID Column -->
+    <ng-container matColumnDef="Accident Type">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Accident Type </th>
+      <td mat-cell *matCellDef="let row"> {{row.accidentType}} </td>
+    </ng-container>
+    <!-- state Column -->
+    <ng-container matColumnDef="State">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> State </th>
+      <td mat-cell *matCellDef="let row"> {{row.region}} </td>
+    </ng-container>
+    <!-- city Column -->
+    <ng-container matColumnDef="City">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+      <td mat-cell *matCellDef="let row"> {{row.city}} </td>
+    </ng-container>
+    
+      <!-- death -->
+      <ng-container matColumnDef="Death">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Death </th>
+        <td mat-cell *matCellDef="let row"> {{row.numberOfDeath}} </td>
+      </ng-container>
+    <!-- death end -->
+      <!-- Color Column -->
+      <ng-container matColumnDef="Injury">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Injury </th>
+        <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.numberOfMajorInjury}} </td>
+      </ng-container>
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let row" class="action-link"> 
+        <button mat-raised-button color="primary" (click)=" accidentDetail(row.accidentid)">Details</button>
+        
+      </ng-container>
+      <ng-container matColumnDef="update">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Update </th>
+        <td mat-cell *matCellDef="let row" class="action-link"> 
+        <button mat-raised-button color="accent" (click)=" accidentUpdate(row.accidentid)">Update</button>
+        
+      </ng-container>
+      <ng-container matColumnDef="upload">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Upload </th>
+        <td mat-cell *matCellDef="let row" class="action-link"> 
+        <button mat-raised-button color="primary" (click)="upload(row.accidentid)">Upload</button>
+        
+      </ng-container>
+    
+    <ng-container matColumnDef="download">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Download </th>
+      <td mat-cell *matCellDef="let row" class="action-link"> 
+      <button mat-raised-button color="primary" (click)="download(row.accidentid)">Download</button>
+      
+    </ng-container>
+
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+      </tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[7, 10, 25, 100]"></mat-paginator>
+  </div>

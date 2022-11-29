@@ -1,0 +1,53 @@
+<div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> List of Driver
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              
+              <th scope="col">Additiona lInfo</th>
+              <th scope="col">Education</th>
+              <th scope="col">License Number</th>
+              <th scope="col">Issued State</th>
+              <th scope="col">Issued Country</th>
+              <th scope="col">Issued Date</th>
+              
+              <th scope="col">Detail</th>
+              
+            </tr>
+          </thead>
+          <tbody *ngIf="acc">
+            <tr *ngFor="let acc of acc">
+              
+              <td>{{acc.accident.accidentid}}</td> 
+              <td>{{acc.accident.accidentType}}</td>
+              <td>{{acc.accident.additionalInfo}}</td>
+              <td>{{acc.accident.addressLocation}}</td>
+              <td>{{acc.accident.city}}</td>
+              <td>{{acc.accident.region}}</td>
+             
+              <td>
+                <button  type= "button" (click)=" motoristDetail(acc.accident.accidentid)" class="btn btn-block btn-primary">Detail</button>
+              </td>
+              
+            </tr>
+            
+          </tbody>
+        </table>
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--/.col-->

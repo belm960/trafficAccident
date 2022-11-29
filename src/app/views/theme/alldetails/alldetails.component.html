@@ -1,0 +1,230 @@
+
+
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-car"></i> Vehicles Involved in the accident
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              
+              <th>Vehicle Owner</th>
+              <th>Plate Number</th>
+              <th>Vehicle Type</th>
+              <th>Make</th>
+              <th>Model</th>
+              <th>Color</th>
+              <th>Year</th>
+              <th>Vin</th>
+              <th>Speed before Accident</th>
+             
+              <th>Manner of collision</th>
+              <th>Accident Position</th>
+              <th>Additional Information</th>
+              <th>Action</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let x of vehicle">
+                
+              <td>{{x.vehicleOwner}}</td>
+              <td>{{x.plateNumber}}</td>
+              <td>{{x.vehicleType}}</td>
+              <td>{{x.make}}</td>
+              <td>{{x.model}}</td>
+              <td>{{x.color}}</td>
+              <td>{{x.year}}</td>
+              <td>{{x.vin}}</td>
+              <td>{{x.vehicle_speed_before_accident_KMh}}</td>
+              
+              <td>{{x.mannerOfCollision}}</td>
+              <td>{{x.accidentPosition}}</td>
+              <td>{{x.additionalInfo}}</td>
+              
+              <td>
+                <button (click)="VehicleUpdate(x.vehicleid)" type="button" class="btn btn-success">Update</button>
+              </td>
+              <td>
+                <button (click)="deletevehicle(x.vehicleid)" type="button" class="btn btn-danger">Delete</button>
+              </td>
+              
+              
+            
+            </tr>
+
+          </tbody>
+          
+
+        </table>
+        
+      </div>
+    </div>
+  </div>
+<!--Driver start-->
+<div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-user-secret"></i> Driver
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>License Number</th>
+              <th>Has License</th>
+              <th>Issued Country</th>
+              <th>Issued State</th>
+              <th>Issued Date</th>
+              <th>Education</th>
+              
+              <th>Additional Information</th>
+              <th>motorisReadiness</th>
+              <th>Action</th>
+
+            </tr>
+          </thead>
+          <tbody *ngFor="let x of vehicle">
+            <tr *ngFor="let m of x.motorists">
+              <td>{{m.licenseNumber}}</td>
+              <td>{{m.hasLicense}}</td>
+              <td>{{m.issuedCountry}}</td>
+              <td>{{m.issuedState}}</td>
+              <td>{{m.issuedDate}}</td>
+              <td>{{m.education}}</td>
+              <td>{{m.additionalInfo}}</td>
+              <td>{{m.motorisReadiness}}</td>
+              
+              <td>
+                <button (click)="MotoristUpdate(m.motoristid)" type="button" class="btn btn-success">Update</button>
+              </td>
+              <td>
+                
+                <button (click)="deletemotorist(m.motoristid)" type="button" class="btn btn-danger">Delete</button>
+              </td>
+              <td>
+                
+                <button [routerLink]="['/theme/motorist',x.vehicleid]" type= "button" class="btn btn-block btn-primary"> Add</button>
+              </td>
+              
+            </tr>
+            
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+  </div>
+<!--Driver End-->
+  <!--person in Veh start-->
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-users"></i> Persons in vehicle at time of the Accident
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Middle Name</th>
+              <th>Last Name</th>
+              <th>Gender</th>
+              <th>Address</th>
+              <th>Phone Number</th>
+              <th>InjuryClass</th>
+              <th>Additional Information</th>
+              <th>Restraint Used</th>
+              <th>Action</th>
+
+            </tr>
+          </thead>
+          <tbody *ngFor="let x of vehicle">
+            <tr *ngFor="let e of x.personinvehicles">
+              <td>{{e.firstName}}</td>
+              <td>{{e.middleName}}</td>
+              <td>{{e.lastName}}</td>
+              <td>{{e.sex}}</td>
+              <td>{{e.address}}</td>
+              <td>{{e.phoneNumber}}</td>
+              <td>{{e.injuryClass}}</td>
+              <td>{{e.additionalInfo}}</td>
+              <td>{{e.restraintUsed}}</td>
+              <td>
+                <button (click)="PIVUpdate(e.personid)" type="button" class="btn btn-success">Update</button>
+              </td>
+              <td>
+                <button (click)="deletepiv(e.personid)" type="button" class="btn btn-danger">Delete</button>
+              </td>
+              <td>
+                <button [routerLink]="['/theme/personinvehicle',x.vehicleid]" type= "button" class="btn btn-block btn-primary"> Add</button>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+  </div>
+
+  <!--person in Veh End-->
+
+  <!--Pedestrian start-->
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-child"></i> Pedestrian
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>InjuryClass</th>
+                <th>Additional Information</th>
+                
+                <th>Position During Accident</th>
+                <th>Action</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let x of vehicle">
+            <tr *ngFor="let p of x.pedastrians">
+                <td>{{p.firstName}}</td>
+                <td>{{p.middleName}}</td>
+                <td>{{p.lastName}}</td>
+                <td>{{p.sex}}</td>
+                <td>{{p.age}}</td>
+                <td>{{p.address}}</td>
+                <td>{{p.phoneNumber}}</td>
+                <td>{{p.injuryClass}}</td>
+                <td>{{p.additionalInfo}}</td>
+                
+                <td>{{p.positionDuringAccident}}</td>
+                <td>
+                  <button (click)="PedastrianUpdate(p.pedastrianid)" type="button" class="btn btn-success">Update</button>
+                </td>
+                <td>
+                  <button (click)="deleteped(p.pedastrianid)" type="button" class="btn btn-danger">Delete</button>
+                </td>
+                <td>
+                  <button [routerLink]="['/theme/pedastrian',x.vehicleid]" type= "button" class="btn btn-block btn-primary">Add</button>
+                </td>
+
+            </tr>
+            
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+  </div>
+  <!--Pedestrian end-->

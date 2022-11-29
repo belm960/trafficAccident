@@ -1,0 +1,103 @@
+           <!--Motorist row start-->
+           <form role="form" (ngSubmit)="updatemotorist(motoristform.value)"  #motoristform="ngForm">
+            <div class="row">
+          
+             <div class="col-md-12">
+               <div class="card">
+                 <div class="card-header">
+                   <strong>Motorist Information</strong>
+                 </div>
+                 <div class="row">
+                 <div class="col-md-4">
+                 <div class="card-body">
+                   
+                     <div class="form-group">
+                       <label class="col-md-3 col-form-label" for="additionalInfoDto">Additional Information</label>
+                       <div class="col-md-9">
+                         <input type="text" id="additionalInfoDto" [ngModel]= "additionalInfo" name="additionalInfoDto" class="form-control" placeholder="">
+                         
+                       </div>
+                     </div>
+                     <div class="form-group">
+                       <label class="col-md-3 col-form-label" for="dateCreatedDto">Date Created</label>
+                       <div class="col-md-9">
+                         <input type="date" id="dateCreatedDto" [ngModel]= "dateCreated" name="dateCreatedDto" class="form-control" placeholder="">
+                        
+                       </div>
+                     </div>
+                     <div class="form-group">
+                       <label class="col-md-3 col-form-label" for="dateUpdatedDto">Updated Date</label>
+                       <div class="col-md-9">
+                         <input type="date" id="dateUpdatedDto" [ngModel]= "dateUpdated" name="dateUpdatedDto" class="form-control" placeholder="">
+                         
+                       </div>
+                     </div>
+                     <div class="form-group">
+                       <label class="col-md-3 col-form-label" for="educationDto">Education</label>
+                       <div class="col-md-9">
+                         <input type="text" id="educationDto" [ngModel]= "education" name="educationDto" class="form-control" placeholder="">
+                        
+                       </div>
+                     </div>
+                     <div class="form-group">
+                       <label class="col-md-3 col-form-label" for="hasLicenseDto">Has License</label>
+                       <div class="col-md-9">
+                         <label class="radio-inline"><input type="radio" [ngModel]= "hasLicense" name="hasLicenseDto" checked>Yes</label>
+                         <label class="radio-inline"><input type="radio" [ngModel]= "hasLicense" name="hasLicenseDto">No</label>
+                        
+                       </div>
+                     </div>
+                   
+                 </div>
+                 
+                 </div>
+                 <div class="col-md-4">
+                   <div class="card-body">
+                     
+                       <div class="form-group">
+                         <label class="col-md-3 col-form-label" for="issuedCountryDto">License Issued Country</label>
+                         <div class="col-md-9">
+                           <input type="text" id="issuedCountryDto" [ngModel]= "issuedCountry" name="issuedCountryDto" class="form-control" placeholder="">
+                           
+                         </div>
+                       </div>
+                       <div class="form-group">
+                         <label class="col-md-3 col-form-label" for="issuedDateDto">License issued Date</label>
+                         <div class="col-md-9">
+                           <input type="date" id="issuedDateDto" [ngModel]= "issuedDate" name="issuedDateDto" class="form-control" placeholder="">
+                          
+                         </div>
+                       </div>
+                       <div class="form-group">
+                         <label class="col-md-3 col-form-label" for="issuedStateDto">License Issued State</label>
+                         <div class="col-md-9">
+                           <input type="text" id="issuedStateDto" [ngModel]= "issuedState" name="issuedStateDto" class="form-control" placeholder="">
+                           
+                         </div>
+                       </div>
+                       <div class="form-group">
+                         <label class="col-md-3 col-form-label" for="licenseNumberDto">License Number</label>
+                         <div class="col-md-9">
+                           <input type="text" id="licenseNumberDto" [ngModel]= "licenseNumber" name="licenseNumberDto" class="form-control" placeholder="">
+                          
+                         </div>
+                       </div>
+                       <div class="form-group">
+                         <label class="col-md-3 col-form-label" for="motorisReadinessDto">Motoris Readiness</label>
+                         <div class="col-md-9">
+                           <input type="text" id="motorisReadinessDto" [ngModel]= "motorisReadiness" name="motorisReadinessDto" class="form-control" placeholder="">
+                          
+                         </div>
+                       </div>
+                     
+                   </div>
+                 </div>
+                 
+                 </div>
+               </div>
+             </div>
+           </div>
+           <button class="btn btn-primary" type="submit" >Save</button>
+           </form>
+           <!--Motorist row end-->
+ 

@@ -1,0 +1,58 @@
+<div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> List of Vehicles
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col"> Accident ID</th>
+              <th scope="col">Car Make</th>
+              <th scope="col">Car Model</th>
+              <th scope="col">Car Color</th>
+              <th scope="col">Plate Number</th>
+              <th scope="col">Owner</th>
+              <th scope="col">Add Motorist</th>
+              <th scope="col">Add person in Vehicle</th>
+              <th scope="col">Add Pedestrian</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="vehicle">
+            <tr *ngFor="let veh of vehicle">
+              <th scope="row">1</th> 
+              <td>{{veh?.accident.accidentid}}</td> 
+              <td>{{veh?.make}}</td>
+              <td>{{veh?.model}}</td>
+              <td>{{veh?.color}}</td>
+              <td>{{veh?.plateNumber}}</td>
+              <td>{{veh?.vehicleOwner}}</td>
+              <td>
+                <button [routerLink]="['/theme/motorist',veh?.vehicleid]" type= "button" class="btn btn-block btn-primary">Driver</button>
+              </td>
+              <td>
+                <button [routerLink]="['/theme/personinvehicle',veh?.vehicleid]" type= "button" class="btn btn-block btn-primary">Person in Vehicle</button>
+              </td>
+              <td>
+                <button [routerLink]="['/theme/pedastrian',veh?.vehicleid]" type= "button" class="btn btn-block btn-primary">Pedestrian</button>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--/.col-->
+

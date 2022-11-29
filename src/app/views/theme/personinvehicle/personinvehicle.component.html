@@ -1,0 +1,140 @@
+
+<form [formGroup]="personinvehicleform" (ngSubmit)="addPerson(personinvehicleform.value)" class="form-horizontal">
+    
+        
+    <div class="card-body">
+      
+        <div class="card ">
+            <div class="col-lg-8 alert alert-danger col-centered" *ngIf="error">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>Error!</strong> {{error}}
+              </div>
+              <div class="col-lg-8 alert alert-success col-centered" *ngIf="success">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>SUCCESS!</strong> {{success}}
+              </div>
+              <br>
+        <div class="card" *ngIf="showsavebutton">
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-4">
+                    <button type="button" class="btn btn-primary" (click)="addPersonInVehicle()">
+                     Add Person in Vehicle Information
+                    </button>
+               
+                </div>
+            </div>
+            <div formArrayName= "personsinVehicle" *ngFor="let person of t.controls; let i = index">
+                <div [formGroupName]="i">
+                    <div class="row">
+   
+                        <div class="col-md-6">
+                          <div class="card">
+                    <div class="card-body">
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="firstNameDto">First Name</label>
+                        <div class="col-md-9">
+                          <input type="text" id="firstNameDto" formControlName="firstNameDto" name="firstNameDto" class="form-control" placeholder="Enter first..">
+                          
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="middleNameDto">Middle Name</label>
+                        <div class="col-md-9">
+                          <input type="text" id="middleNameDto" formControlName="middleNameDto" name="middleNameDto" class="form-control" placeholder="Enter middle..">
+                          
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="lastNameDto">Last Name</label>
+                        <div class="col-md-9">
+                          <input type="text" id="lastNameDto" formControlName="lastNameDto" name="lastNameDto" class="form-control" placeholder="Enter last..">
+                          
+                        </div>
+                      </div>
+                      <!-- <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="ageDto">Age</label>
+                        <div class="col-md-9">
+                          <input type="text" id="ageDto" formControlName="ageDto" name="ageDto" class="form-control" placeholder="Enter age..">
+                          
+                        </div>
+                      </div> -->
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="sexDto">Gender</label>
+                        <div class="col-md-9">
+                          <input type="text" id="sexDto" formControlName="sexDto" name="sexDto" class="form-control" placeholder="Enter sex..">
+                          
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="addressDto">Address</label>
+                        <div class="col-md-9">
+                          <input type="text" id="addressDto" formControlName="addressDto" name="addressDto" class="form-control" placeholder="Enter License..">
+                          
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input">Phone Number</label>
+                        <div class="col-md-9">
+                          <input type="text" id="phoneNumberDto" formControlName="phoneNumberDto" name="phoneNumberDto" class="form-control" placeholder="Enter phone..">
+                          
+                        </div>
+                      </div>
+                      <!-- <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="dateCreatedDto">Date Created</label>
+                        <div class="col-md-9">
+                          <input type="date" id="dateCreatedDto" formControlName="dateCreatedDto" name="dateCreatedDto" class="form-control" placeholder="Enter date..">
+                          
+                        </div>
+                      </div> -->
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="injuryClassDto">Injury Class</label>
+                        <div class="col-md-9">
+                          <input type="text" id="injuryClassDto" formControlName="injuryClassDto" name="injuryClassDto" class="form-control" placeholder="Enter class..">
+                          
+                        </div>
+                      </div>
+                      
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="additionalInfoDto">Additional Info</label>
+                        <div class="col-md-9">
+                          <input type="text" id="additionalInfoDto" formControlName="additionalInfoDto" name="additionalInfoDto" class="form-control" placeholder="Enter additional..">
+                          
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="restraintUsedDto">Restraint Used</label>
+                        <div class="col-md-9">
+                          <input type="text" id="restraintUsedDto" formControlName="restraintUsedDto" name="restraintUsedDto" class="form-control" placeholder="Enter restraint..">
+                          
+                        </div>
+                      </div>
+                              
+                    
+                   
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+        
+        
+        <div class="card-footer" *ngIf="showsavebutton" >
+            <button class="btn btn-primary" type="submit" >Save</button>
+            <button class="btn btn-secondary mr-1" type="reset" (click)="onReset()">Reset</button>
+        </div>
+       
+   
+        
+
+    </div>
+
+
+
+</div>
+
+ <div *ngIf="accident">
+            <button  class="btn btn-secondary mr-1" type="reset" (click)="next()">Next</button>
+        </div>

@@ -1,0 +1,152 @@
+
+
+<form role="form" (ngSubmit)="updatevehicle(vehicleform.value)"  #vehicleform="ngForm">
+
+
+
+    <div class="row">
+             
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <strong>Vehicle Information</strong>
+            </div>
+            <div class="row">
+            <div class="col-md-4">
+            <div class="card-body">
+              
+                <div class="form-group row ">
+                  <label class="col-md-3 col-form-label" for="accidentPositionDto">Accident Position</label>
+                  <div class="col-md-9">
+                    <input type="text" id="accidentPositionDto" [ngModel]= "accidentposition" name="accidentPositionDto" class="form-control" placeholder="">
+                    
+                  </div>
+                </div>
+                <div class="form-group row  ">
+                  <label class="col-md-3 col-form-label" for="additionalInfoDto">Additional Info</label>
+                  <div class="col-md-9">
+                    <input type="text" id="additionalInfoDto" [ngModel]= "additionalinfo" name="additionalInfoDto" class="form-control">
+                   
+                  </div>
+                </div>
+                <div class="form-group row  ">
+                  <label class="col-md-3 col-form-label" for="colorDto">Color</label>
+                  <div class="col-md-9">
+                    <input type="text" id="colorDto" [ngModel]= "vehiclecolor" name="colorDto" class="form-control" placeholder="">
+                    
+                  </div>
+                </div>
+                <div class="form-group row  ">
+                  <label class="col-md-3 col-form-label" for="damageClassDto">Damage Class</label>
+                  <div class="col-md-9">
+                    <input type="text" id="damageClassDto" name="damageClassDto" class="form-control" placeholder="">
+                   
+                  </div>
+                </div>
+                <div class="form-group row  ">
+                  <label class="col-md-3 col-form-label" for="dateCreatedDto">Date Created</label>
+                  <div class="col-md-9">
+                    <input type="date" id="dateCreatedDto" name="dateCreatedDto" class="form-control" placeholder="">
+                   
+                  </div>
+                </div>
+                <div class="form-group row  ">
+                  <label class="col-md-3 col-form-label" for="dateUpdatedDto">Date Updated</label>
+                  <div class="col-md-9">
+                    <input type="date" id="dateUpdatedDto" name="dateUpdatedDto" class="form-control" placeholder="">
+                   
+                  </div>
+                </div>
+                <div class="form-group row ">
+                  <label class="col-md-3 col-form-label" for="makeDto">make</label>
+                  <div class="col-md-9">
+                    <input type="text" id="makeDto" [ngModel]= "vehiclemake" name="makeDto" class="form-control" placeholder="">
+                   
+                  </div>
+                </div>
+                <div class="form-group row ">
+                  <label class="col-md-3 col-form-label" for="hasInsuranceDto">Has Insurance</label>
+                  <div class="col-md-9">
+                    <label class="radio-inline"><input type="radio" name="hasInsuranceDto" checked>Yes</label>
+                    <label class="radio-inline"><input type="radio" name="hasInsuranceDto">No</label>
+                   
+                  </div>
+                </div>
+              
+            </div>
+            
+            </div>
+            <div class="col-md-4">
+              <div class="card-body">
+                
+                  <div class="form-group row ">
+                    <label class="col-md-3 col-form-label" for="mannerOfCollisionDto">Manner of Collision</label>
+                    <div class="col-md-9">
+                      <input type="text" id="mannerOfCollisionDto" [ngModel]= "vehiclemanner" name="mannerOfCollisionDto" class="form-control" placeholder="">
+                      
+                    </div>
+                  </div>
+                  <div class="form-group row ">
+                    <label class="col-md-3 col-form-label" for="modelDto">Model</label>
+                    <div class="col-md-9">
+                      <input type="text" id="modelDto" [ngModel]= "vehiclemodel" name="modelDto" class="form-control" placeholder="">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row  ">
+                    <label class="col-md-3 col-form-label" for="plateNumberDto">Plate Number</label>
+                    <div class="col-md-9">
+                      <input type="text" id="plateNumberDto" [ngModel]= "vehicleplatenumber" name="plateNumberDto" class="form-control">
+                      
+                    </div>
+                  </div>
+                  <div class="form-group row ">
+                    <label class="col-md-3 col-form-label"  for="licenseNumberDto">Vehicle owner</label>
+                    <div class="col-md-9">
+                      <input type="text" id="vehicleOwnerDto" [ngModel]= "vehicleowner" name="vehicleOwnerDto"  class="form-control" placeholder="">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row ">
+                    <label class="col-md-3 col-form-label" for="vehicle_speed_before_accident_KMhDto">Vehicle speed before accident/KMh</label>
+                    <div class="col-md-9">
+                      <input type="text" id="vehicle_speed_before_accident_KMhDto" [ngModel]= "vehiclespeed" name="vehicle_speed_before_accident_KMhDto" class="form-control" placeholder="">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row ">
+                    <label class="col-md-3 col-form-label" for="vehicleTypeDto">Vehicle Type</label>
+                    <div class="col-md-9">
+                      <input type="text" id="vehicleTypeDto" [ngModel]= "vehicletype" name="vehicleTypeDto" class="form-control" placeholder="">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row ">
+                    <label class="col-md-3 col-form-label" for="vinDto">Vin</label>
+                    <div class="col-md-9">
+                      <input type="text" id="vinDto" [ngModel]= "vehiclevin" name="vinDto" class="form-control" placeholder="">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row ">
+                    <label class="col-md-3 col-form-label" for="yearDto">Motoris Readiness</label>
+                    <div class="col-md-9">
+                      <input type="text" id="yearDto" [ngModel]= "vehicleyear" name="yearDto" class="form-control" placeholder="">
+                     
+                    </div>
+                    
+                  </div>
+                
+              </div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" >Save</button>
+    </form>
+    
+    
+    <!--Vehicle info end-->
+    

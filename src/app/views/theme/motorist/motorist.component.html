@@ -1,0 +1,94 @@
+<form [formGroup]="motoristform" (ngSubmit)="registerMotorist(motoristform.value)" class="form-horizontal">
+    <div class="card ">
+        
+        <div class="card-body">
+          
+           
+            <div class="card">
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-4">
+                        <button type="button" class="btn btn-primary" (click)="addMotorist()">
+                         Add Driver Information
+                        </button>
+                   
+                    </div>
+                </div>
+                <div formArrayName= "motoristDto" *ngFor="let person of t.controls; let i = index">
+                    <div [formGroupName]="i">
+                        <div class="row">
+                            <div class="col-md-6">
+                            <div class="card-body">
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="additionalInfoDto">Additional Information</label>
+                                    <div class="col-md-9">
+                                      <input type="text" id="additionalInfoDto" formControlName="additionalInfoDto" name="additionalInfoDto" class="form-control" placeholder="Enter additional..">
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="educationDto">Education</label>
+                                    <div class="col-md-9">
+                                      <input type="text" id="educationDto" formControlName="educationDto" name="educationDto" class="form-control" placeholder="Enter education..">
+                                     
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="issuedStateDto">License Issued State</label>
+                                    <div class="col-md-9">
+                                      <input type="text" id="issuedStateDto" formControlName="issuedStateDto" name="issuedStateDto" class="form-control" placeholder="Enter state..">
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="licenseNumberDto">License Number</label>
+                                    <div class="col-md-9">
+                                      <input type="text" id="licenseNumberDto" formControlName="licenseNumberDto" name="licenseNumberDto" class="form-control" placeholder="Enter number..">
+                                     
+                                    </div>
+                                  </div>
+                                  <!-- <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="hasLicenseDto">Has License</label>
+                                    <div class="col-md-9">
+                                      <label class="radio-inline"><input type="radio" formControlName="hasLicenseDto" name="hasLicenseDto">Yes</label>
+                                      <label class="radio-inline"><input type="radio" formControlName="hasLicenseDto" name="hasLicenseDto">No</label>
+                                     
+                                    </div>
+                                  </div> -->
+                                  <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="issuedCountryDto">License Issued Country</label>
+                                    <div class="col-md-9">
+                                      <input type="text" id="issuedCountryDto" formControlName="issuedCountryDto" name="issuedCountryDto" class="form-control" placeholder="Enter Country..">
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="motorisReadinessDto">Motoris Readiness</label>
+                                    <div class="col-md-9">
+                                      <input type="text" id="motorisReadinessDto" formControlName="motorisReadinessDto" name="motorisReadinessDto" class="form-control" placeholder="Enter readiness..">
+                                     
+                                    </div>
+                                  </div>
+                        
+                                  
+                        
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+            
+            <div class="card-footer">
+                <button class="btn btn-primary" type="submit" >Save</button>
+                <button class="btn btn-secondary mr-1" type="reset" (click)="onReset()">Reset</button>
+            </div>
+
+    
+        </div>
+    
+    
+    
+    </div>

@@ -1,0 +1,47 @@
+
+
+.jumbotron{
+
+    background-image: linear-gradient(to right, red , yellow);
+    height: 100px;
+   
+    padding-top: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+img {
+
+    border-radius: 1%;
+}
+.table1 {
+    margin-bottom: 10px;
+}
+body {
+
+    background-image: linear-gradient(to right, lightgray , lightblue);
+}
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 50%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+  .mat-row:nth-child(2n+1){
+    background-color: #e4f0ec;
+  }
+  .mat-row:not(:nth-child(2n+1)){
+    background-color:#ffffff;
+  }
+  .mat-header-cell {
+    color:rebeccapurple;
+    background-color: lightblue;
+    
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: medium;
+}

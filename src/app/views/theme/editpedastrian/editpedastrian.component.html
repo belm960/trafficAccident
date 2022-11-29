@@ -1,0 +1,100 @@
+ <!--pedastrian row start-->
+ <form role="form" (ngSubmit)="updatepedastrian(pedastrianform.value)"  #pedastrianform="ngForm">
+ 
+    <div class="row">
+          
+       <div class="col-md-6">
+         <div class="card">
+           <div class="card-header">
+             <strong>Pedastrian Information</strong> 
+           </div>
+           <div class="card-body">
+             
+               <div class="form-group">
+                 <label class="col-md-3 col-form-label" for="firstNameDto">First Name</label>
+                 <div class="col-md-9">
+                   <input type="text" id="firstNameDto" [ngModel]= "firstName" name="firstNameDto" class="form-control" placeholder="">
+                   
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-form-label" for="middleNameDto">Middle Name</label>
+                 <div class="col-md-9">
+                   <input type="text" id="middleNameDto" [ngModel]= "middleName" name="middleNameDto" class="form-control" placeholder="">
+                   
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-form-label" for="lastNameDto">Last Name</label>
+                 <div class="col-md-9">
+                   <input type="text" id="lastNameDto" [ngModel]= "lastName" name="lastNameDto" class="form-control" placeholder="">
+                   
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-form-label" for="ageDto">Age</label>
+                 <div class="col-md-9">
+                   <input type="text" id="ageDto" [ngModel]= "age" name="ageDto" class="form-control" placeholder="">
+                   
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-form-label" for="sexDto">Gender</label>
+                 <div class="col-md-9">
+                   <input type="text" id="sexDto" [ngModel]= "sex" name="sexDto" class="form-control" placeholder="">
+                   
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-form-label" for="addressDto">Address</label>
+                 <div class="col-md-9">
+                   <input type="text" id="addressDto" [ngModel]= "address" name="addressDto" class="form-control" placeholder="">
+                   
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-form-label" for="text-input">Phone Number</label>
+                 <div class="col-md-9">
+                   <input type="text" id="phoneNumberDto" [ngModel]= "phoneNumber" name="phoneNumberDto" class="form-control" placeholder="">
+                   
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-form-label" for="dateCreatedDto">Date Created</label>
+                 <div class="col-md-9">
+                   <input type="date" id="dateCreatedDto" [ngModel]= "dateCreated" name="dateCreatedDto" class="form-control" placeholder="">
+                   
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-form-label" for="injuryClassDto">Injury Class</label>
+                 <div class="col-md-9">
+                   <input type="text" id="injuryClassDto" [ngModel]= "injuryClass" name="injuryClassDto" class="form-control" placeholder="">
+                   
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-form-label" for="positionDuringAccidentDto">Position During Accident</label>
+                 <div class="col-md-9">
+                   <input type="text" id="positionDuringAccidentDto" [ngModel]= "positionDuringAccident" name="positionDuringAccidentDto" class="form-control" placeholder="">
+                   
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label class="col-md-3 col-form-label" for="additionalInfoDto">Additional Info</label>
+                 <div class="col-md-9">
+                   <input type="text" id="additionalInfoDto" [ngModel]= "additionalInfo" name="additionalInfoDto" class="form-control" placeholder="">
+                   
+                 </div>
+               </div>
+             
+           </div>
+         </div>
+       </div>
+       
+     </div>
+     <button class="btn btn-primary" type="submit" >Save</button>
+   </form>
+       <!--/.col-->
+       <!--pedastrian row end-->
+   

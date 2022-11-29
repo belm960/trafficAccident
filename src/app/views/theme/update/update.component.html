@@ -1,0 +1,233 @@
+ 
+              <!--accident row start-->
+              <form role="form" (ngSubmit)="updateaccident(accidentform.value)"  #accidentform="ngForm">
+                <div class="row">
+                   
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <strong>Accident Information</strong>
+                      </div>
+                      <div class="row">
+                      <div class="col-md-4">
+                      <div class="card-body">
+                        
+                          <div class="form-group row" >
+                            <label class="col-md-5 col-form-label" for="accidentTypeDto" >Accident Type</label>
+                            <div class="col-md-7">
+                              <input type="text"  id="accidentTypeDto"  [ngModel]="accidentType" name="accidentTypeDto"  class="form-control" >
+                              
+                            </div>
+                          </div>
+                          
+                          <div class="form-group row">
+                            <label class="col-md-5 col-form-label" for="addressLocationDto">Address Location</label>
+                            <div class="col-md-7">
+                              <input type="text"  id="addressLocationDto" [ngModel]="addressLocation" name="addressLocationDto" class="form-control" placeholder="">
+                              
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-5 col-form-label" for="cityDto">City</label>
+                            <div class="col-md-7">
+                              <input type="text"  id="cityDto" [ngModel]="city" name="cityDto" class="form-control" placeholder="">
+                             
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-5 col-form-label" for="Region">Region</label>
+                            <div class="col-md-7">
+                              <input type="int" id="regionDto" [ngModel]="region" name="regionDto" class="form-control" placeholder="">
+                             
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-5 col-form-label" for="dateCreatedDto">Date Created</label>
+                            <div class="col-md-7">
+                              <input type="date" id="dateCreatedDto" [ngModel]="dateCreated" name="dateCreatedDto" class="form-control" placeholder="">
+                             
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-5 col-form-label" for="dateOfAccidentDto">Date of Accident</label>
+                            <div class="col-md-7">
+                              <input type="date" id="dateOfAccidentDto" [ngModel]="dateOfAccident" name="dateOfAccidentDto" class="form-control" placeholder="">
+                             
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-5 col-form-label" for="dateUpdatedDto">Date Updated</label>
+                            <div class="col-md-7">
+                              <input type="date" id="dateUpdatedDto" [ngModel]="dateUpdated" name="dateUpdatedDto" class="form-control" placeholder="">
+                             
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-5 col-form-label" for="latitudeDto">Latitude</label>
+                            <div class="col-md-7">
+                              <input type="text" id="latitudeDto" [ngModel]="latitude" name="latitudeDto" class="form-control" placeholder="">
+                             
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-md-5 col-form-label" for="logitudeDto">Logitude</label>
+                            <div class="col-md-7">
+                              <input type="text" id="logitudeDto" [ngModel]="logitude" name="logitudeDto" class="form-control" placeholder="">
+                             
+                            </div>
+                          </div>
+                        
+                      </div>
+                      
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="legalRoadSpeedKmhDto">Legal Road Speed/Kmh</label>
+                              <div class="col-md-7">
+                                <input type="text" id="legalRoadSpeedKmhDto" [ngModel]="legalRoadSpeedKmh" name="legalRoadSpeedKmhDto" class="form-control" placeholder="">
+                                
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="numberOfModerateInjuryDto">Number of Moderate Injury</label>
+                              <div class="col-md-7">
+                                <input type="int" id="numberOfModerateInjuryDto" [ngModel]="numberOfModerateInjury" name="numberOfModerateInjuryDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="numberOfDeathDto">Number of Death</label>
+                              <div class="col-md-7">
+                                <input type="int" id="numberOfDeathDto" [ngModel]="numberOfDeath" name="numberOfDeathDto" class="form-control" placeholder="">
+                                
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="numberOfMajorInjuryDtoo">Number of Major Injury</label>
+                              <div class="col-md-7">
+                                <input type="int" id="numberOfMajorInjuryDto" [ngModel]="numberOfMajorInjury" name="numberOfMajorInjuryDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="numberOfMinorInjuryDto">Number of Minor Injury</label>
+                              <div class="col-md-7">
+                                <input type="int" id="numberOfMinorInjuryDto" [ngModel]="numberOfMinorInjury" name="numberOfMinorInjuryDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="numberOfPeopleInvolvedDto">Number of People Involved</label>
+                              <div class="col-md-7">
+                                <input type="int" id="numberOfPeopleInvolvedDto" [ngModel]="numberOfPeopleInvolved" name="numberOfPeopleInvolvedDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="numberOfVehiclesInvolvedDto">No. of Vehicles Involved</label>
+                              <div class="col-md-7">
+                                <input type="int" id="numberOfVehiclesInvolvedDto" [ngModel]="numberOfVehiclesInvolved" name="numberOfVehiclesInvolvedDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="additionalInfoDto">Additional Info</label>
+                              <div class="col-md-7">
+                                <input type="text" id="additionalInfoDto" [ngModel]="additionalInfo" name="additionalInfoDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="timeOfAccidentDto">Time of Accident</label>
+                              <div class="col-md-7">
+                                <input type="int" id="timeOfAccidentDto" [ngModel]="timeOfAccident" name="timeOfAccidentDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                          
+                        </div>
+                        
+                        </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                          
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="reportingOfficerNameDto">Reporting Officer Name</label>
+                              <div class="col-md-7">
+                                <input type="text" id="reportingOfficerNameDto" [ngModel]="reportingOfficerName" name="reportingOfficerNameDto" class="form-control" placeholder="">
+                                
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="reportingOfficerPhoneDto">Reporting Officer Phone</label>
+                              <div class="col-md-7">
+                                <input type="text" id="reportingOfficerPhoneDto" [ngModel]="reportingOfficerPhone" name="reportingOfficerPhoneDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="reportingOfficerStataionDto">Reporting Officer Stataion</label>
+                              <div class="col-md-7">
+                                <input type="text" id="reportingOfficerStataionDto" [ngModel]="reportingOfficerStataion" name="reportingOfficerStataionDto" class="form-control" placeholder="">
+                                
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="roadClassificationDto">Road Classification</label>
+                              <div class="col-md-7">
+                                <input type="text" id="roadClassificationDto" [ngModel]="roadClassification" name="roadClassificationDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="roadConditionDto">Road Condition</label>
+                              <div class="col-md-7">
+                                <input type="text" id="roadConditionDto" [ngModel]="roadCondition" name="roadConditionDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="roadTypeDto">roadTypeDto</label>
+                              <div class="col-md-7">
+                                <input type="text" id="roadTypeDto" [ngModel]="roadType" name="roadTypeDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="uknownInjuryDto">Uknown Injury</label>
+                              <div class="col-md-7">
+                                <input type="int" id="uknownInjuryDto" [ngModel]="uknownInjury" name="uknownInjuryDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="updatedByDto">Updated By</label>
+                              <div class="col-md-7">
+                                <input type="date" id="updatedByDto" [ngModel]="updatedBy" name="updatedByDto" class="form-control" placeholder="">
+                               
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-5 col-form-label" for="weatherDuringAccidentDto">Weather During Accident</label>
+                              <div class="col-md-7">
+                                <input type="text" id="weatherDuringAccidentDto" [ngModel]="weatherDuringAccident" name="weatherDuringAccidentDto" class="form-control" placeholder="">
+                               
+                              </div>
+                              
+                            </div>
+                          
+                        </div>
+                      </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit" >Save</button>
+              </form>
+              <!--accident row end-->
+                     
+                      
+                       

@@ -1,0 +1,133 @@
+<div class="container-fluid">
+<div class="jumbotron text-center">
+  <h2>Traffic Accident Analysis</h2>
+  <p>ANALYSIS OF US ACCIDENTS AND SOLUTIONS !</p> 
+</div>
+
+<!--table start-->
+<div class="row">
+  
+  <div class="col-sm-12" >
+    <div class= "table1">
+    <img src="assets/img/avatars/tableN.png" class="img-avatar" alt="admin@bootstrapmaster.com">
+
+  </div>
+  </div>
+  
+ 
+</div>
+<!--graph start-->
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="card">
+        <div class="card-header">
+          Road accidents
+        </div>
+        <div class="card-body">
+          Road accidents have become very common these days. Nearly 1.25 million people die in road crashes each year, on average, 3,287 deaths a day. Road accidents have become very common these days. Moreover, 20–50 million people are injured or disabled annually. Road traffic crashes rank as the 9th leading cause of death and accounts for 2.2% of all deaths globally. Road crashes cost USD 518 billion globally, costing individual countries from 1–2% of their annual GDP.
+          
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-md-4">
+      
+      <img src="assets/img/avatars/traficN.png" class="img-avatar" alt="admin@bootstrapmaster.com">
+      
+    
+    </div><!--/.col-->
+    <div class="col-sm-6 col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-check"></i>Data
+        </div>
+        <div class="card-body">
+          Road accidents have become very common these days. Nearly 1.25 million people die in road crashes each year, on average, 3,287 deaths a day. Road accidents have become very common these days. Moreover, 20–50 million people are injured or disabled annually. Road traffic crashes rank as the 9th leading cause of death and accounts for 2.2% of all deaths globally. Road crashes cost USD 518 billion globally, costing individual countries from 1–2% of their annual GDP.
+        </div>
+      </div>
+    </div><!--/.col-->
+   
+      </div>
+    </div>
+    <!--horizontal table start-->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <i class="fa fa-align-justify"></i> Accident Report 
+          </div>
+          <div class="card-body">
+            <mat-form-field>
+              <mat-label>Filter</mat-label>
+              <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia">
+            </mat-form-field>
+            
+            <div class="mat-elevation-z8">
+              <table mat-table [dataSource]="dataSource" matSort>
+                 
+                <!-- ID Column -->
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Accident ID </th>
+                  <td mat-cell *matCellDef="let row"> {{row.accidentid}} </td>
+                </ng-container>
+              <!-- ID Column -->
+              <ng-container matColumnDef="Accident Type">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Accident Type </th>
+                <td mat-cell *matCellDef="let row"> {{row.accidentType}} </td>
+              </ng-container>
+              <!-- state Column -->
+              <ng-container matColumnDef="State">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> State </th>
+                <td mat-cell *matCellDef="let row"> {{row.region}} </td>
+              </ng-container>
+              <!-- city Column -->
+              <ng-container matColumnDef="City">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+                <td mat-cell *matCellDef="let row"> {{row.city}} </td>
+              </ng-container>
+              
+                <!-- death -->
+                <ng-container matColumnDef="Death">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Death </th>
+                  <td mat-cell *matCellDef="let row"> {{row.numberOfDeath}} </td>
+                </ng-container>
+              <!-- death end -->
+                <!-- Color Column -->
+                <ng-container matColumnDef="Injury">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Injury </th>
+                  <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.numberOfMajorInjury}} </td>
+                </ng-container>
+                <ng-container matColumnDef="action">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+                  <td mat-cell *matCellDef="let row" class="action-link"> 
+                  <button mat-raised-button color="primary" (click)=" accidentDetail(row.accidentid)">Details</button>
+                  
+                </ng-container>
+                <ng-container matColumnDef="update">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Update </th>
+                  <td mat-cell *matCellDef="let row" class="action-link"> 
+                  <button mat-raised-button color="accent" (click)=" accidentUpdate(row.accidentid)">Update</button>
+                  
+                </ng-container>
+          
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+                </tr>
+              </table>
+            
+              <mat-paginator [pageSizeOptions]="[7, 10, 25, 100]"></mat-paginator>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+    </div>
+
+    <!--horizontal table end-->
+
+  </div> <!--top container-->

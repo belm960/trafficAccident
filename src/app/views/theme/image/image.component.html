@@ -1,0 +1,12 @@
+
+
+  <div class="row mb-4">
+    <div class="col-md-4" *ngFor='let image of imageNames'>
+      <a href="http://bedlustore.s3.us-east-2.amazonaws.com/{{image.name}}" data-toggle="lightbox" data-gallery="img-gallery" data-height="560"
+        data-width="560">
+        <img src="http://bedlustore.s3.us-east-2.amazonaws.com/{{image.name}}" alt="" class="img-fluid">
+      </a>
+    </div>
+  </div>
+
+

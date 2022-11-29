@@ -1,0 +1,446 @@
+
+<div class= "toptitle">
+    <h3>Accident Registration Form</h3>
+    </div>
+
+       
+    <form [formGroup]="accidentform" (ngSubmit)="registerAccident(accidentform.value)" class="form-horizontal">
+    
+
+    
+<!--accident row start-->
+    <div class = "motorist">
+        <div class="row">
+           
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <strong>Accident Information</strong>
+              </div>
+              <div class="row">
+              <div class="col-md-4">
+              <div class="card-body">
+                
+                  <div class="form-group row">
+                    <label class="col-md-5 col-form-label" for="accidentTypeDto">Accident Type</label>
+                    <div class="col-md-7">
+                      <input type="text"  id="accidentTypeDto" formControlName="accidentTypeDto"     name="accidentTypeDto" class="form-control" placeholder="Enter type..">
+                      
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label class="col-md-5 col-form-label" for="addressLocationDto">Address Location</label>
+                    <div class="col-md-7">
+                      <input type="text"  id="addressLocationDto" formControlName="addressLocationDto" name="addressLocationDto" class="form-control" placeholder="Enter address..">
+                      
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-5 col-form-label" for="cityDto">City</label>
+                    <div class="col-md-7">
+                      <input type="text"  id="cityDto" formControlName="cityDto" name="cityDto" class="form-control" placeholder="Enter city..">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-5 col-form-label" for="Region">Region</label>
+                    <div class="col-md-7">
+                      <input type="text" id="regionDto" formControlName="regionDto" name="regionDto" class="form-control" placeholder="Enter region..">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-5 col-form-label" for="dateCreatedDto">Date Created</label>
+                    <div class="col-md-7">
+                      <input type="date" id="dateCreatedDto" formControlName="dateCreatedDto" name="dateCreatedDto" class="form-control" placeholder="Enter date..">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-5 col-form-label" for="dateOfAccidentDto">Date of Accident</label>
+                    <div class="col-md-7">
+                      <input type="date" id="dateOfAccidentDto" formControlName="dateOfAccidentDto" name="dateOfAccidentDto" class="form-control" placeholder="Enter accident..">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-5 col-form-label" for="dateUpdatedDto">Date Updated</label>
+                    <div class="col-md-7">
+                      <input type="date" id="dateUpdatedDto" formControlName="dateUpdatedDto" name="dateUpdatedDto" class="form-control" placeholder="Enter update..">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-5 col-form-label" for="latitudeDto">Latitude</label>
+                    <div class="col-md-7">
+                      <input type="text" id="latitudeDto" formControlName="latitudeDto" name="latitudeDto" class="form-control" placeholder="Enter latitude.">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-5 col-form-label" for="logitudeDto">Logitude</label>
+                    <div class="col-md-7">
+                      <input type="text" id="logitudeDto" formControlName="logitudeDto" name="logitudeDto" class="form-control" placeholder="Enter education..">
+                     
+                    </div>
+                  </div>
+                
+              </div>
+              
+              </div>
+              <div class="col-md-4">
+                <div class="card-body">
+                  
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="legalRoadSpeedKmhDto">Legal Road Speed/Kmh</label>
+                      <div class="col-md-7">
+                        <input type="text" id="legalRoadSpeedKmhDto" formControlName="legalRoadSpeedKmhDto" name="legalRoadSpeedKmhDto" class="form-control" placeholder="Enter speed..">
+                        
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="numberOfModerateInjuryDto">Number of Moderate Injury</label>
+                      <div class="col-md-7">
+                        <input type="int" id="numberOfModerateInjuryDto" formControlName="numberOfModerateInjuryDto" name="numberOfModerateInjuryDto" class="form-control" placeholder="Enter moderate..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="numberOfDeathDto">Number of Death</label>
+                      <div class="col-md-7">
+                        <input type="int" id="numberOfDeathDto" formControlName="numberOfDeathDto" name="numberOfDeathDto" class="form-control" placeholder="Enter death..">
+                        
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="numberOfMajorInjuryDtoo">Number of Major Injury</label>
+                      <div class="col-md-7">
+                        <input type="int" id="numberOfMajorInjuryDto" formControlName="numberOfMajorInjuryDto" name="numberOfMajorInjuryDto" class="form-control" placeholder="Enter major..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="numberOfMinorInjuryDto">Number of Minor Injury</label>
+                      <div class="col-md-7">
+                        <input type="int" id="numberOfMinorInjuryDto" formControlName="numberOfMinorInjuryDto" name="numberOfMinorInjuryDto" class="form-control" placeholder="Enter minor..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="numberOfPeopleInvolvedDto">Number of People Involved</label>
+                      <div class="col-md-7">
+                        <input type="int" id="numberOfPeopleInvolvedDto" formControlName="numberOfPeopleInvolvedDto" name="numberOfPeopleInvolvedDto" class="form-control" placeholder="Enter people..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="numberOfVehiclesInvolvedDto">No. of Vehicles Involved</label>
+                      <div class="col-md-7">
+                        <input type="int" id="numberOfVehiclesInvolvedDto" formControlName="numberOfVehiclesInvolvedDto" name="numberOfVehiclesInvolvedDto" class="form-control" placeholder="Enter vehicle..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="additionalInfoDto">Additional Info</label>
+                      <div class="col-md-7">
+                        <input type="text" id="additionalInfoDto" formControlName="additionalInfoDto" name="additionalInfoDto" class="form-control" placeholder="Enter additional..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="timeOfAccidentDto">Time of Accident</label>
+                      <div class="col-md-7">
+                        <input type="int" id="timeOfAccidentDto" formControlName="timeOfAccidentDto" name="timeOfAccidentDto" class="form-control" placeholder="Enter time..">
+                       
+                      </div>
+                    </div>
+                  
+                </div>
+                
+                </div>
+              <div class="col-md-4">
+                <div class="card-body">
+                  
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="reportingOfficerNameDto">Reporting Officer Name</label>
+                      <div class="col-md-7">
+                        <input type="text" id="reportingOfficerNameDto" formControlName="reportingOfficerNameDto" name="reportingOfficerNameDto" class="form-control" placeholder="Enter name..">
+                        
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="reportingOfficerPhoneDto">Reporting Officer Phone</label>
+                      <div class="col-md-7">
+                        <input type="text" id="reportingOfficerPhoneDto" formControlName="reportingOfficerPhoneDto" name="reportingOfficerPhoneDto" class="form-control" placeholder="Enter phone..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="reportingOfficerStataionDto">Reporting Officer Stataion</label>
+                      <div class="col-md-7">
+                        <input type="text" id="reportingOfficerStataionDto" formControlName="reportingOfficerStataionDto" name="reportingOfficerStataionDto" class="form-control" placeholder="Enter station..">
+                        
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="roadClassificationDto">Road Classification</label>
+                      <div class="col-md-7">
+                        <input type="text" id="roadClassificationDto" formControlName="roadClassificationDto" name="roadClassificationDto" class="form-control" placeholder="Enter road cla..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="roadConditionDto">Road Condition</label>
+                      <div class="col-md-7">
+                        <input type="text" id="roadConditionDto" formControlName="roadConditionDto" name="roadConditionDto" class="form-control" placeholder="Enter condition..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="roadTypeDto">roadTypeDto</label>
+                      <div class="col-md-7">
+                        <input type="text" id="roadTypeDto" formControlName="roadTypeDto" name="roadTypeDto" class="form-control" placeholder="Enter type..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="uknownInjuryDto">Uknown Injury</label>
+                      <div class="col-md-7">
+                        <input type="int" id="uknownInjuryDto" formControlName="uknownInjuryDto" name="uknownInjuryDto" class="form-control" placeholder="Enter unknown..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="updatedByDto">Updated By</label>
+                      <div class="col-md-7">
+                        <input type="date" id="updatedByDto" formControlName="updatedByDto" name="updatedByDto" class="form-control" placeholder="Enter updated..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-5 col-form-label" for="weatherDuringAccidentDto">Weather During Accident</label>
+                      <div class="col-md-7">
+                        <input type="text" id="weatherDuringAccidentDto" formControlName="weatherDuringAccidentDto" name="weatherDuringAccidentDto" class="form-control" placeholder="Enter weather..">
+                       
+                      </div>
+                    </div>
+                  
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    
+
+    <div class="card bg-light">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-12">
+                <button type="button" class="btn btn-danger" (click)="addVehicle()">
+                 Click here to add Vehicle Information
+                </button>
+              
+            </div>
+        </div>
+        <div formArrayName="vehiclesDto" *ngFor="let vehicle of t.controls; let i = index">
+        <div [formGroupName]="i">
+            
+             <!--Vehicle info start-->
+    <div class = "motorist">
+        <div class="row">
+           
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <strong>Vehicle Information</strong>
+              </div>
+              <div class="row">
+              <div class="col-md-6">
+              <div class="card-body">
+                
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="accidentPositionDto">Accident Position</label>
+                    <div class="col-md-9">
+                      <input type="text" id="accidentPositionDto" formControlName="accidentPositionDto" name="accidentPositionDto" class="form-control" placeholder="Enter position..">
+                      
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="additionalInfoDto">Additional Info</label>
+                    <div class="col-md-9">
+                      <input type="text" id="additionalInfoDto" formControlName="additionalInfoDto" name="additionalInfoDto" class="form-control" placeholder="Enter additional..">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="colorDto">Color</label>
+                    <div class="col-md-9">
+                      <input type="text" id="colorDto" formControlName="colorDto" name="colorDto" class="form-control" placeholder="Enter color..">
+                      
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="damageClassDto">Damage Class</label>
+                    <div class="col-md-9">
+                      <input type="text" id="damageClassDto" formControlName="damageClassDto" name="damageClassDto" class="form-control" placeholder="Enter damage..">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="dateCreatedDto">Date Created</label>
+                    <div class="col-md-9">
+                      <input type="date" id="dateCreatedDto" formControlName="dateCreatedDto" name="dateCreatedDto" class="form-control" placeholder="Enter date..">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="dateUpdatedDto">Date Updated</label>
+                    <div class="col-md-9">
+                      <input type="date" id="dateUpdatedDto" formControlName="dateUpdatedDto" name="dateUpdatedDto" class="form-control" placeholder="Enter updated..">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="makeDto">make</label>
+                    <div class="col-md-9">
+                      <input type="text" id="makeDto" formControlName="makeDto" name="makeDto" class="form-control" placeholder="Enter make..">
+                     
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="hasInsuranceDto">Has Insurance</label>
+                    <div class="col-md-9">
+                      <label class="radio-inline"><input type="radio" formControlName="hasInsuranceDto" name="hasInsuranceDto" checked>Yes</label>
+                      <label class="radio-inline"><input type="radio" formControlName="hasInsuranceDto" name="hasInsuranceDto">No</label>
+                     
+                    </div>
+                  </div>
+                
+              </div>
+              
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="mannerOfCollisionDto">Manner of Collision</label>
+                      <div class="col-md-9">
+                        <input type="text" id="mannerOfCollisionDto" formControlName="mannerOfCollisionDto" name="mannerOfCollisionDto" class="form-control" placeholder="Enter manner..">
+                        
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="modelDto">Model</label>
+                      <div class="col-md-9">
+                        <input type="text" id="modelDto" formControlName="modelDto" name="modelDto" class="form-control" placeholder="Enter model..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="plateNumberDto">Plate Number</label>
+                      <div class="col-md-9">
+                        <input type="text" id="plateNumberDto" formControlName="plateNumberDto" name="plateNumberDto" class="form-control" placeholder="Enter plate..">
+                        
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="licenseNumberDto">Vehicle owner</label>
+                      <div class="col-md-9">
+                        <input type="text" id="vehicleOwnerDto" formControlName="vehicleOwnerDto" name="vehicleOwnerDto" class="form-control" placeholder="Enter owner..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="vehicle_speed_before_accident_KMhDto">Vehicle speed before accident/KMh</label>
+                      <div class="col-md-9">
+                        <input type="text" id="vehicle_speed_before_accident_KMhDto" formControlName="vehicle_speed_before_accident_KMhDto" name="vehicle_speed_before_accident_KMhDto" class="form-control" placeholder="Enter speed..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="vehicleTypeDto">Vehicle Type</label>
+                      <div class="col-md-9">
+                        <input type="text" id="vehicleTypeDto" formControlName="vehicleTypeDto" name="vehicleTypeDto" class="form-control" placeholder="Enter vehicle..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="vinDto">Vin</label>
+                      <div class="col-md-9">
+                        <input type="text" id="vinDto" formControlName="vinDto" name="vinDto" class="form-control" placeholder="Enter vin..">
+                       
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="yearDto">Year</label>
+                      <div class="col-md-9">
+                        <input type="int" id="yearDto" formControlName="yearDto" name="yearDto" class="form-control" placeholder="Enter year..">
+                       
+                      </div>
+                    </div>
+                  
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      
+      
+      <!--Vehicle info end-->
+        </div>
+
+    </div>
+    
+    <!-- <div class="card">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <button type="button" class="btn btn-primary" (click)="addPedstrianInVehicle()">
+                 Add Pedstrian
+                </button>
+           
+            </div>
+        </div> -->
+        <!-- <div formArrayName= "pedistriansDto" *ngFor="let person of accidentform.get('pedistriansDto'); let i = index">
+            <div [formGroupName]="i">
+                <div class="form-group">
+                 <label class="cl-sm-2 control-lable" for="firstnameDto">Pedestrian  Information</label>
+                 <div class="col-sm-4">
+                 
+                     <input type="text" placeholder= "First Name" formControlName="firstnameDto" id="firstnameDto" class="form-control" > 
+                 </div>
+                </div>
+                 <div class="form-group">
+                 <div class="col-sm-4">
+                    <input type="text" formControlName="lastnameDto" placeholder="Last Name" class="form-control" id="lastnameDto" >
+                </div>
+               </div>
+                         
+               
+              
+           </div>
+       </div> -->
+ 
+   <!-- </div> -->
+   
+   </div>
+ 
+    <!--accident row end-->
+    
+    
+    
+    <button class="btn btn-primary" type="submit">Save</button>
+
+
+       
+      
+   
+</form>
+
+
